@@ -11,7 +11,9 @@ namespace ConsoleApp1
                 Console.Write("Checked " + i + " ");
                 if (i < 0)
                     Console.WriteLine("Negative number");
-                else
+                else if (i == 0)
+                    Console.WriteLine("number without signed");
+                else 
                     Console.WriteLine("Positive number");
             }
         }
