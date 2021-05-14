@@ -1,6 +1,6 @@
 using System;
 
-namespace ConsoleApp3
+namespace ConsoleApp4
 {
     public class Stack
     {
@@ -13,6 +13,14 @@ namespace ConsoleApp3
             _tos = 0;
         }
 
+        public Stack(Stack ob)
+        {
+            stck = new char[ob.stck.Length];
+            for (int i = 0; i < ob._tos; i++)
+                stck[i] = ob.stck[i];
+            _tos = ob._tos;
+        }
+        
         public void Push(char ch)
         {
             if (IsFull())
