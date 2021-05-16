@@ -1,13 +1,13 @@
 using System;
 
-namespace ConsoleApp3
+namespace ConsoleApp4
 {
     public class MyClass
     {
         private int a;
         private int b;
 
-        public MyClass Factory(int i, int j)
+        public static MyClass Factory(int i, int j)
         {
             MyClass t = new MyClass();
             t.a = i;
