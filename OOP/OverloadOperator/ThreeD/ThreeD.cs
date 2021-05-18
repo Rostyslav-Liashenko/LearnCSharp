@@ -20,6 +20,24 @@ namespace ConsoleApp4
             this._z = z;
         }
 
+        public static ThreeD operator-(ThreeD op)
+        {
+            ThreeD result = new ThreeD();
+            result._x = -op._x;
+            result._y = -op._y;
+            result._z = -op._z;
+            return result;
+        }
+
+        public static ThreeD operator++(ThreeD op)
+        {
+            ThreeD result = new ThreeD();
+            result._x = op._x + 1;
+            result._y = op._y + 1;
+            result._z = op._z + 1;
+            return result;
+        }
+        
         public static ThreeD operator+(ThreeD op1, ThreeD op2)
         {
             ThreeD result = new ThreeD();

@@ -31,6 +31,25 @@ namespace ConsoleApp4
             Console.WriteLine("Result of c - b");
             c.Show();
             Console.WriteLine();
+            c = -a;
+            Console.WriteLine("Result of -a");
+            c.Show();
+            Console.WriteLine();
+            c = a++;
+            Console.WriteLine("if c = a++");
+            Console.WriteLine("than coordinate point c:");
+            c.Show();
+            Console.WriteLine("coordinate point a:");
+            a.Show();
+            a = new ThreeD(1, 2, 3);
+            Console.WriteLine("Set sources value point a:");
+            a.Show();
+            c = ++a;
+            Console.WriteLine("\nIf c = ++a");
+            Console.WriteLine("than coordinate point c :");
+            c.Show();
+            Console.WriteLine("coordinate point a:");
+            a.Show();
         }
     }
 }
