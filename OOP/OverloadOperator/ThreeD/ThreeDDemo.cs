@@ -50,6 +50,14 @@ namespace ConsoleApp4
             c.Show();
             Console.WriteLine("coordinate point a:");
             a.Show();
+            Console.WriteLine("Coordinate point b:");
+            b.Show();
+            c = b + 10;
+            Console.WriteLine("Result of b + 10");
+            c.Show();
+            c = 10 + b;
+            Console.WriteLine("Result of 10 + b");
+            c.Show();
         }
     }
 }

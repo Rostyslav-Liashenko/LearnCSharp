@@ -46,7 +46,25 @@ namespace ConsoleApp4
             result._z = op1._z + op2._z;
             return result;
         }
-
+        
+        public static ThreeD operator+(int op1, ThreeD op2)
+        {
+            ThreeD result = new ThreeD();
+            result._x = op2._x + op1;
+            result._y = op2._y + op1;
+            result._z = op2._z + op1;
+            return result;
+        }
+        
+        public static ThreeD operator+(ThreeD op1, int op2)
+        {
+            ThreeD result = new ThreeD();
+            result._x = op1._x + op2;
+            result._y = op1._y + op2;
+            result._z = op1._z + op2;
+            return result;
+        }
+        
         public static ThreeD operator-(ThreeD op1, ThreeD op2)
         {
             ThreeD result = new ThreeD();
@@ -55,7 +73,7 @@ namespace ConsoleApp4
             result._z = op1._z - op2._z;
             return result;
         }
-
+        
         public void Show()
         {
             Console.WriteLine(_x + " " + _y + " " + _z);
