@@ -85,7 +85,16 @@ namespace ConsoleApp4
             return (Math.Sqrt(op1._x * op1._x + op1._y * op1._y + op1._z * op1._z) >
                     Math.Sqrt(op2._x * op2._x + op2._y * op2._y + op2._z * op2._z));
         }
-        
+
+        public static bool operator true(ThreeD op)
+        {
+            return (op._x != 0) || (op._y != 0) || (op._z != 0);
+        }
+
+        public static bool operator false(ThreeD op)
+        {
+            return (op._x == 0) && (op._y == 0) && (op._z == 0);
+        }
 
         public void Show()
         {

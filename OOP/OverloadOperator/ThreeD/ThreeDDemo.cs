@@ -80,6 +80,13 @@ namespace ConsoleApp4
             if (a > d) Console.WriteLine("a > d true");
             else if (a < d) Console.WriteLine("a < d true");
             else Console.WriteLine("Point a and d places in same distance from {0,0,0}");
+            a = new ThreeD(5, 6, 7);
+            b = new ThreeD(10, 10, 10);
+            c = new ThreeD(0, 0, 0);
+            Console.WriteLine(a ? "a is true" : "a is false");
+            Console.WriteLine(b ? "b is true" : "b is false");
+            Console.WriteLine(c ? "c is true" : "c is false");
+
         }
     }
 }
