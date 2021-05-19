@@ -73,7 +73,20 @@ namespace ConsoleApp4
             result._z = op1._z - op2._z;
             return result;
         }
+
+        public static bool operator<(ThreeD op1, ThreeD op2)
+        {
+            return (Math.Sqrt(op1._x * op1._x + op1._y * op1._y + op1._z * op1._z) <
+                    Math.Sqrt(op2._x * op2._x + op2._y * op2._y + op2._z * op2._z));
+        }
         
+        public static bool operator>(ThreeD op1, ThreeD op2)
+        {
+            return (Math.Sqrt(op1._x * op1._x + op1._y * op1._y + op1._z * op1._z) >
+                    Math.Sqrt(op2._x * op2._x + op2._y * op2._y + op2._z * op2._z));
+        }
+        
+
         public void Show()
         {
             Console.WriteLine(_x + " " + _y + " " + _z);
