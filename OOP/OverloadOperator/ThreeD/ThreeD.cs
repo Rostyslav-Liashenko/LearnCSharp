@@ -1,5 +1,6 @@
 using System;
 
+
 namespace ConsoleApp4
 {
     public class ThreeD
@@ -96,6 +97,23 @@ namespace ConsoleApp4
             return (op._x == 0) && (op._y == 0) && (op._z == 0);
         }
 
+        public static bool operator |(ThreeD op1, ThreeD op2)
+        {
+            return (op1._x != 0) || (op1._y != 0) || (op1._z != 0) |
+                   (op2._x != 0) || (op2._y != 0) || (op2._z != 0);
+        }
+
+        public static bool operator &(ThreeD op1, ThreeD op2)
+        {
+            return (op1._x != 0 && op1._y != 0 && op1._z != 0) &
+                    (op2._x != 0 && op2._y != 0 && op2._z != 0);
+        }
+
+        public static bool operator !(ThreeD op)
+        {
+            return !((op._x != 0) || (op._y != 0) || (op._z != 0));
+        }
+        
         public void Show()
         {
             Console.WriteLine(_x + " " + _y + " " + _z);

@@ -86,7 +86,27 @@ namespace ConsoleApp4
             Console.WriteLine(a ? "a is true" : "a is false");
             Console.WriteLine(b ? "b is true" : "b is false");
             Console.WriteLine(c ? "c is true" : "c is false");
-
+            a = new ThreeD(5, 6, 7);
+            b = new ThreeD(10, 10, 10);
+            c = new ThreeD(0, 0, 0);
+            Console.Write("Coordinate point a:");
+            a.Show();
+            Console.Write("Coordinate point b:");
+            b.Show();
+            Console.Write("Coordinate point c:");
+            c.Show();
+            if (!a) Console.WriteLine("Point a is false");
+            if (!b) Console.WriteLine("Point b is false");
+            if (!c) Console.WriteLine("Point c is false");
+            if (a & b) Console.WriteLine("a & b is true");
+            else Console.WriteLine("a & b is false");
+            if (a & c) Console.WriteLine("a & c is true");
+            else Console.WriteLine("a & c is false");
+            if (a | b) Console.WriteLine("a | b  is true");
+            else Console.WriteLine("a | b is false");
+            if (a | c) Console.WriteLine("a | c is true");
+            else Console.WriteLine("a | c is false");
+            
         }
     }
 }
