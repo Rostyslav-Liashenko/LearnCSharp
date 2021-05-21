@@ -97,21 +97,30 @@ namespace ConsoleApp4
             return (op._x == 0) && (op._y == 0) && (op._z == 0);
         }
 
-        public static bool operator |(ThreeD op1, ThreeD op2)
+        public static ThreeD operator |(ThreeD op1, ThreeD op2)
         {
-            return (op1._x != 0) || (op1._y != 0) || (op1._z != 0) |
-                   (op2._x != 0) || (op2._y != 0) || (op2._z != 0);
+            if ((op1._x != 0) || (op1._y != 0) || (op1._z != 0) |
+                (op2._x != 0) || (op2._y != 0) || (op2._z != 0))
+                return new ThreeD(1, 1, 1);
+            else
+                return new ThreeD(0, 0, 0);
         }
 
-        public static bool operator &(ThreeD op1, ThreeD op2)
+        public static ThreeD operator &(ThreeD op1, ThreeD op2)
         {
-            return (op1._x != 0 && op1._y != 0 && op1._z != 0) &
-                    (op2._x != 0 && op2._y != 0 && op2._z != 0);
+            if ((op1._x != 0 && op1._y != 0 && op1._z != 0) &
+                (op2._x != 0 && op2._y != 0 && op2._z != 0))
+                return new ThreeD(1, 1, 1);
+            else
+                return new ThreeD(0, 0, 0);
         }
 
         public static bool operator !(ThreeD op)
         {
-            return !((op._x != 0) || (op._y != 0) || (op._z != 0));
+            if (op)
+                return false;
+            else
+                return true;
         }
         
         public void Show()

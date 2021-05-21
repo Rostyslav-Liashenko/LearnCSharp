@@ -106,7 +106,15 @@ namespace ConsoleApp4
             else Console.WriteLine("a | b is false");
             if (a | c) Console.WriteLine("a | c is true");
             else Console.WriteLine("a | c is false");
-            
+            Console.WriteLine();
+            if (a && b) Console.WriteLine("a && b is true");
+            else Console.WriteLine("a && b is false");
+            if (a && c) Console.WriteLine("a && c is true");
+            else Console.WriteLine("a && c is false");
+            if (a || b) Console.WriteLine("a || b is true");
+            else Console.WriteLine("a || b is false");
+            if (a || c) Console.WriteLine("a || c is true");
+            else Console.WriteLine("a || c is false");
         }
     }
 }
