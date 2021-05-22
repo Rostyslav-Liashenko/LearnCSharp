@@ -115,6 +115,15 @@ namespace ConsoleApp4
             else Console.WriteLine("a || b is false");
             if (a || c) Console.WriteLine("a || c is true");
             else Console.WriteLine("a || c is false");
+            a = new ThreeD(1, 2, 3);
+            Console.WriteLine("Coordinate point a:");
+            a.Show();
+            Console.WriteLine();
+            int i = (int) a;
+            Console.WriteLine("i = " + i);
+            Console.WriteLine();
+            i = (int) a * 2 - (int) b;
+            Console.WriteLine("Result of calculation expresion (a * 2 - b): " + i);
         }
     }
 }

@@ -127,5 +127,17 @@ namespace ConsoleApp4
         {
             Console.WriteLine(_x + " " + _y + " " + _z);
         }
+        
+        /*
+        public static implicit operator int(ThreeD op1)
+        {
+            return op1._x * op1._y * op1._z;
+        }
+        */
+        
+        public static explicit operator int(ThreeD op1)
+        {
+            return op1._x * op1._y * op1._z;
+        }
     }
 }
