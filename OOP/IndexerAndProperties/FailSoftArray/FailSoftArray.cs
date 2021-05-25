@@ -46,6 +46,46 @@ namespace ConsoleApp4
                     errFlag = true;
             }
         }
+
+        public int this[double idx]
+        {
+            get
+            {
+                int index;
+                if (idx - (int) idx < 0.5)
+                    index = (int) idx;
+                else
+                    index = (int) (idx) + 1;
+                if (Ok(index))
+                {
+                    errFlag = false;
+                    return a[index];
+                }
+                else
+                {
+                    errFlag = true;
+                    return 0;
+                }
+            }
+            set
+            {
+                int index;
+                if (idx - (int) idx < 0.5)
+                    index = (int) idx;
+                else
+                    index = (int) (idx) + 1;
+                if (Ok(index))
+                {
+                    a[index] = value;
+                    errFlag = false;
+                }
+                else
+                {
+                    errFlag = true;
+                }
+
+            }
+        }
         
         private bool Ok(int index)
         {

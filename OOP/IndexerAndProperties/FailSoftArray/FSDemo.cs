@@ -33,6 +33,9 @@ namespace ConsoleApp4
                 else 
                     Console.WriteLine("fs[" + i + "] out the range");
             }
+            
+            Console.WriteLine("fs[1.1] " + fs[1.1]);
+            Console.WriteLine("fs[1.6] " + fs[1.6]);
         }
     }
 }
