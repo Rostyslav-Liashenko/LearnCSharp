@@ -3,23 +3,30 @@ namespace ConsoleApp4
     public class FailSoftArray
     {
         private int[] a;
-        private int length;
+        private int len;
         private bool errFlag;
 
         public FailSoftArray(int size)
         {
             a = new int[size];
-            length = size;
+            len = size;
         }
 
-        public bool GetErrFlag()
+        public bool Error
         {
-            return errFlag;
+            get
+            {
+                return errFlag;
+            }
         }
-        public int GetLength()
+        public int Length
         {
-            return length;
+            get
+            {
+                return len;
+            }
         }
+        
         public int this[int index]
         {
             get
@@ -89,7 +96,7 @@ namespace ConsoleApp4
         
         private bool Ok(int index)
         {
-            return (index >= 0 & index < length);
+            return (index >= 0 & index < len);
         }
         
     }
