@@ -3,28 +3,14 @@ namespace ConsoleApp4
     public class FailSoftArray
     {
         private int[] a;
-        private int len;
-        private bool errFlag;
+
+        public int Length { get; private set; }
+        public bool Error { get; private set; }
 
         public FailSoftArray(int size)
         {
             a = new int[size];
-            len = size;
-        }
-
-        public bool Error
-        {
-            get
-            {
-                return errFlag;
-            }
-        }
-        public int Length
-        {
-            get
-            {
-                return len;
-            }
+            Length = size;
         }
         
         public int this[int index]
@@ -33,12 +19,12 @@ namespace ConsoleApp4
             {
                 if (Ok(index))
                 {
-                    errFlag = false;
+                    Error = false;
                     return a[index];
                 }
                 else
                 {
-                    errFlag = true;
+                    Error = true;
                     return 0;
                 }
             }
@@ -47,10 +33,10 @@ namespace ConsoleApp4
                 if (Ok(index))
                 {
                     a[index] = value;
-                    errFlag = false;
+                    Error = false;
                 }
                 else
-                    errFlag = true;
+                    Error = true;
             }
         }
 
@@ -65,12 +51,12 @@ namespace ConsoleApp4
                     index = (int) (idx) + 1;
                 if (Ok(index))
                 {
-                    errFlag = false;
+                    Error = false;
                     return a[index];
                 }
                 else
                 {
-                    errFlag = true;
+                    Error = true;
                     return 0;
                 }
             }
@@ -84,11 +70,11 @@ namespace ConsoleApp4
                 if (Ok(index))
                 {
                     a[index] = value;
-                    errFlag = false;
+                    Error = false;
                 }
                 else
                 {
-                    errFlag = true;
+                    Error = true;
                 }
 
             }
@@ -96,7 +82,7 @@ namespace ConsoleApp4
         
         private bool Ok(int index)
         {
-            return (index >= 0 & index < len);
+            return (index >= 0 & index < Length);
         }
         
     }

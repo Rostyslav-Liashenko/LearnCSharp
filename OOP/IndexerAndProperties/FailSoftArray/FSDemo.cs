@@ -2,7 +2,7 @@ using System;
 
 namespace ConsoleApp4
 {
-    class FinalFSDemo
+    class FSDemo
     {
         static void Main()
         {
@@ -11,8 +11,9 @@ namespace ConsoleApp4
             {
                 fs[i] = i * 10;
                 if (fs.Error)
-                    Console.WriteLine("Error int the index " + i);
+                    Console.WriteLine("Error in the index " + i);
             }
+            
         }
     }
 }
