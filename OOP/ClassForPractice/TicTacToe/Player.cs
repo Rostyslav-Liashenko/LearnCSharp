@@ -1,3 +1,5 @@
+using System;
+
 namespace ConsoleApp5.TicTacToe
 {
     public class Player
@@ -6,9 +8,16 @@ namespace ConsoleApp5.TicTacToe
         public char Symbol { get; private set; }
         public int Row { get; private set; } 
         public int Col { get; private set; }
-        
-        public bool SetStep(int row, int col, int maxRow, int maxCol)
+
+        public bool SetStep(int row, int col, int maxRow, int maxCol, Area area)
         {
+            if (area.CheckFill(row, col))
+            {
+                Console.WriteLine("\nThis cell is not empty\n");
+                area.Show();
+                return false;
+            }
+            
             if ((row >= 0 && row < maxRow) && (col >= 0 && col < maxCol))
             {
                 Row = row;
@@ -18,6 +27,7 @@ namespace ConsoleApp5.TicTacToe
             else 
                 return false;
         }
+        
         public Player(int id, char symbol)
         {
             Id = id;

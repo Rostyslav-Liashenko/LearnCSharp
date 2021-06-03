@@ -23,6 +23,10 @@ namespace ConsoleApp5.TicTacToe
             area[p.Row,p.Col] = p.Symbol;
         }
 
+        public bool CheckFill(int row, int col)
+        {
+            return area[row, col] == 'X' || area[row,  col] == 'O';
+        }
         private bool FinishCheck(ref int number)
         {
             if (number == rows)
