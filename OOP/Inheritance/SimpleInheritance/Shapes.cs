@@ -8,25 +8,25 @@ namespace ConsoleApp6
         static void Main()
         {
             Triangle t1 = new Triangle();
-            Triangle t2 = new Triangle();
-
-            t1.Width = 4.0;
-            t1.Height = 4.0;
-            t1.Style = "isosceles";
-
-            t2.Width = 8.0;
-            t2.Height = 12.0;
-            t2.Style = "Square";
+            Triangle t2 = new Triangle("Square", 8.0, 12.0);
+            Triangle t3 = new Triangle(4.0);
+            
+            t1 = t2;
             
             Console.WriteLine("Info of object t1:");
             t1.ShowStyle();
             t1.ShowDim();
-            Console.WriteLine("Area =" + t1.Area());
+            Console.WriteLine("Area equals " + t1.Area());
             Console.WriteLine();
             Console.WriteLine("Info of object t2:");
             t2.ShowStyle();
             t2.ShowDim();
-            Console.WriteLine("Area = " + t2.Area());
+            Console.WriteLine("Area equals " + t2.Area());
+            Console.WriteLine();
+            Console.WriteLine("Info of object t3:");
+            t3.ShowStyle();
+            t3.ShowDim();
+            Console.WriteLine("Area equals " + t3.Area());
         }
     }
 }

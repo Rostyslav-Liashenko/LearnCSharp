@@ -4,8 +4,22 @@ namespace ConsoleApp6.Shape
 {
     public class Triangle : TwoDShape
     {
-        public string Style;
+        private string style;
 
+        public Triangle()
+        {
+            style = "null";
+        }
+
+        public Triangle(double x) : base(x)
+        {
+            style = "isosceles";
+        }
+        public Triangle(string s, double w, double h) : base(w, h)
+        {
+            style = s;
+        }
+        
         public double Area()
         {
             return Width * Height / 2;
@@ -13,7 +27,7 @@ namespace ConsoleApp6.Shape
 
         public void ShowStyle()
         {
-            Console.WriteLine("Triangle: " + Style);
+            Console.WriteLine("Triangle: " + style);
         }
     }
 }

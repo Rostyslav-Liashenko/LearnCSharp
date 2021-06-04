@@ -7,28 +7,32 @@ namespace ConsoleApp6.Shape
         private double priWidth;
         private double priHeight;
 
+        public TwoDShape()
+        {
+            Height = Width = 0;
+        }
+
+        public TwoDShape(double x)
+        {
+            Height = Width = x;
+        }
+        
+        public TwoDShape(double w, double h)
+        {
+            Width = w;
+            Height = h;
+        }
+        
         public double Width
         {
-            get
-            {
-                return priWidth;
-            }
-            set
-            {
-                priWidth = value < 0 ? -value : value;
-            }
+            get { return priWidth; } 
+            set { priWidth = value < 0 ? -value : value; }
         }
 
         public double Height
-        {
-            get
-            {
-                return priHeight;
-            }
-            set
-            {
-                priHeight = value < 0 ? -value : value;
-            }
+        { 
+            get { return priHeight; }
+            set { priHeight = value < 0 ? -value : value; }
         }
         
         public void ShowDim()
