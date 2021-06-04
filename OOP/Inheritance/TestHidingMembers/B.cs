@@ -6,14 +6,16 @@ namespace ConsoleApp6.HidingMembers
     {
         private new int i;
 
-        public B(int b)
+        public B(int a, int b)
         {
+            base.i = a;
             i = b;
         }
 
-        public void Show()
+        public new void Show()
         {
-            Console.WriteLine("member i in class B:" + i);
+            base.Show();
+            Console.WriteLine("member i in class B: " + i);
         }
         
     }
