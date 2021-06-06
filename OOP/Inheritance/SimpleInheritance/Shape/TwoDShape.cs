@@ -22,6 +22,12 @@ namespace ConsoleApp6.Shape
             Width = w;
             Height = h;
         }
+
+        public TwoDShape(TwoDShape ob)
+        {
+            Width = ob.Width;
+            Height = ob.Height;
+        }
         
         public double Width
         {

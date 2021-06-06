@@ -19,6 +19,11 @@ namespace ConsoleApp6.Shape
         {
             style = s;
         }
+
+        public Triangle(Triangle ob) : base(ob)
+        {
+            style = ob.style;
+        }
         
         public double Area()
         {
