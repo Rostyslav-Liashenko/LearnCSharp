@@ -11,11 +11,11 @@ namespace ConsoleApp6.Shape
             style = "null";
         }
 
-        public Triangle(double x) : base(x)
+        public Triangle(double x) : base(x, "isosceles triangle")
         {
             style = "isosceles";
         }
-        public Triangle(string s, double w, double h) : base(w, h)
+        public Triangle(string s, double w, double h) : base(w, h, "triangle")
         {
             style = s;
         }
@@ -25,7 +25,7 @@ namespace ConsoleApp6.Shape
             style = ob.style;
         }
         
-        public double Area()
+        public override double Area()
         {
             return Width * Height / 2;
         }
