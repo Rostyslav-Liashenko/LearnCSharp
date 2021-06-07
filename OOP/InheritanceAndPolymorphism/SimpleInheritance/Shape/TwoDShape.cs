@@ -2,7 +2,7 @@ using System;
 
 namespace ConsoleApp6.Shape
 {
-    public class TwoDShape
+    public abstract class  TwoDShape
     {
         private double priWidth;
         private double priHeight;
@@ -53,10 +53,6 @@ namespace ConsoleApp6.Shape
             Console.WriteLine("Width and height = " + Width + " " + Height);
         }
 
-        public virtual double Area()
-        {
-            Console.WriteLine("Method Area() not implement in this class");
-            return 0.0;
-        }
+        public abstract double Area();
     }
 }
