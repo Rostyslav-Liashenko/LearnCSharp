@@ -13,6 +13,10 @@ namespace LearnInterfaceProperties
             ob.Next = 21;
             for (int i = 0; i < 5; i++)
                 Console.WriteLine("Next number = " + ob.Next);
+            Console.WriteLine("Reset");
+            ob.Next = 0;
+            for (int i = 0; i < 5; i++)
+                Console.WriteLine("Next number " + ob[i]);
         }
     }
 }

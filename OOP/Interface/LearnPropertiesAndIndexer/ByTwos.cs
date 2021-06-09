@@ -21,5 +21,16 @@ namespace LearnInterfaceProperties
                 val = value;
             }
         }
+
+        public int this[int index]
+        {
+            get
+            {
+                val = 0;
+                for (int i = 0; i < index; i++)
+                    val += 2;
+                return val;
+            }
+        }
     }
 }

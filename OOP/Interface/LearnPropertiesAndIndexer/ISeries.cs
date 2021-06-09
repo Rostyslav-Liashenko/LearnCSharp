@@ -7,5 +7,10 @@ namespace LearnInterfaceProperties
             get;
             set;
         }
+
+        int this[int index]
+        {
+            get;
+        }
     }
 }
