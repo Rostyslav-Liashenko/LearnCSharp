@@ -23,11 +23,11 @@ namespace LearnDelegate
         
         static void Main()
         {
-            NumOp myNumOp = new NumOp(AddTwoNum);
+            NumOp myNumOp = AddTwoNum;
             Console.WriteLine("5 + 2 = " + myNumOp(5,2));
-            myNumOp = new NumOp(SubTwoNum);
+            myNumOp = SubTwoNum;
             Console.WriteLine("5 - 2 = " + myNumOp(5,2));
-            myNumOp = new NumOp(MultiplyTwoNum);
+            myNumOp = MultiplyTwoNum;
             Console.WriteLine("5 * 2 = " + myNumOp(5,2));
         }
     }

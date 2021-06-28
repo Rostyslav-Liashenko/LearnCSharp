@@ -35,18 +35,18 @@ namespace LearnDelegate
         
         static void Main()
         {
-            StrMod strOp = new StrMod(ReplaceSpaces);
-            string str;
-            str = strOp("It is simple test");
+            StrMod strOp = ReplaceSpaces;
+            string str = strOp("It is simple test.");
             Console.WriteLine("Result: " + str);
             Console.WriteLine();
-            strOp = new StrMod(RemoveSpaces);
-            str = strOp("It is simple test");
+            strOp = RemoveSpaces;
+            str = strOp("It is simple test.");
             Console.WriteLine("Result: " + str);
             Console.WriteLine();
-            strOp = new StrMod(Reverse);
-            str = strOp("It is simple test");
+            strOp = Reverse;
+            str = strOp("It is simple test.");
             Console.WriteLine("Result: " + str);
+            Console.WriteLine();
         }
     }
 }
