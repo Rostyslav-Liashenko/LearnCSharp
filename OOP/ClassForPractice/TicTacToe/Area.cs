@@ -1,6 +1,6 @@
 using System;
 
-namespace ConsoleApp5.TicTacToe
+namespace GameTicTacToe
 {
     public class Area
     {
