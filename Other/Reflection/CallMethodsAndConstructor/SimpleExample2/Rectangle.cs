@@ -5,6 +5,11 @@ namespace LearnReflection
         private double a;
         private double b;
 
+	public Rectangle()
+        {
+            a = b = 0;
+        }
+
         public Rectangle(double a, double b)
         {
             this.a = a;
