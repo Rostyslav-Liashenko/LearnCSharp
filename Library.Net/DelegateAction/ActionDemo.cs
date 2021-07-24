@@ -26,7 +26,7 @@ namespace LearnLibrary
             };
             Array.ForEach(nums,Show);
             Console.WriteLine();
-            Array.ForEach(nums,Neg);
+            Array.ForEach(nums, x => x.Num = -x.Num);
             Console.Write("Array nums: ");
             Array.ForEach(nums,Show);
         }
