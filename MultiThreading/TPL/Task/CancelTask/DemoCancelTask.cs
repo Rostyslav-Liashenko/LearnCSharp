@@ -6,46 +6,42 @@ namespace LearnTPL
 {
     class DemoCancelTask
     {
-        static void MyTask(Object ct)
-        {
-            CancellationToken cancelTok = (CancellationToken) ct;
-            cancelTok.ThrowIfCancellationRequested();
-            Console.WriteLine("MyTask() is start");
-            for (int count = 0; count < 10; count++)
-            {
-                if (cancelTok.IsCancellationRequested)
-                {
-                    Console.WriteLine("Task cancellation request received");
-                    cancelTok.ThrowIfCancellationRequested();
-                }
-                Thread.Sleep(500);
-                Console.WriteLine("In method MyTask() count = " + count);
-            }
-            Console.WriteLine("MyTask is end");
-        }
 
+
+        static void MyTask(object tk)
+        {
+            CancellationToken cancelTok = (CancellationToken) tk;
+            cancelTok.ThrowIfCancellationRequested();
+            for (int i = 0; i < 10; i++)
+            {
+                cancelTok.ThrowIfCancellationRequested();
+                Console.WriteLine("i = " + i);
+                Thread.Sleep(500);
+            }
+        }
+        
         static void Main()
         {
-            Console.WriteLine("Main thread is start.");
-            CancellationTokenSource cancelTokSrc = new CancellationTokenSource();
-            Task tsk = Task.Factory.StartNew(MyTask, cancelTokSrc.Token, cancelTokSrc.Token);
+            Console.WriteLine("Main thread is begin.");
+            CancellationTokenSource src = new CancellationTokenSource();
+            Task tsk = Task.Factory.StartNew(MyTask, src.Token, src.Token);
             Thread.Sleep(2000);
             try
             {
-                cancelTokSrc.Cancel();
+                src.Cancel();
                 tsk.Wait();
             }
             catch (AggregateException)
             {
                 if (tsk.IsCanceled)
-                    Console.WriteLine("\nTask is canceled");
+                    Console.WriteLine("Task MyTask is cancel.");
             }
             finally
             {
+                src.Dispose();
                 tsk.Dispose();
-                cancelTokSrc.Dispose();
             }
-            Console.WriteLine("Main thread is end");
+            Console.WriteLine("Main thread is finished.");
         }
     }
 }
