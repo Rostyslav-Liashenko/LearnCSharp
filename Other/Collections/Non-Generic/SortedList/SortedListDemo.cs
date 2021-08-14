@@ -23,10 +23,7 @@ namespace LearnCollections
             Console.WriteLine();
             Console.WriteLine("Integer index elements list");
             foreach (string str in c)
-                Console.WriteLine(str + ": " + sl.IndexOfKey(str));
-            {
-                
-            }
+                Console.WriteLine(str + ": " + sl.IndexOfKey(str));  
         }
     }
 }
