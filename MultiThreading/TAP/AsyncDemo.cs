@@ -1,4 +1,5 @@
 using System;
+using System.IO;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -6,30 +7,45 @@ namespace LearnAsync
 {
     class AsyncDemo
     {
+
+        static async void ReadWriteAsync()
+        {
+            string s = "Hello world! One step at a time";
+            using (StreamWriter writer = new StreamWriter("hello.txt",false))
+            {
+                await writer.WriteLineAsync(s);
+            }
+
+            using (StreamReader reader = new StreamReader("hello.txt"))
+            {
+                string result = await reader.ReadToEndAsync();
+                Console.WriteLine(result);
+            }
+        }
         
-        static void Factorial()
+        static int Factorial(int n)
         {
             int result = 1;
-            for (int i = 1; i <= 6; i++)
+            for (int i = 1; i <= n; i++)
+            {
                 result *= i;
-            Thread.Sleep(8000);
-            Console.WriteLine($"Factorial = {result}");
+            }
+            Thread.Sleep(5000);
+            return result;
         }
-
-        static async void FactorialAsync()
+        
+        
+        static async void FactorialAsync(int n)
         {
-            Console.WriteLine("Begin method FactorialAsync");
-            await Task.Run(() => Factorial());
-            Console.WriteLine("End of method FactorialAsync");
+            int x = await Task.Run(() => Factorial(n));
+            Console.WriteLine($"Factorial {n} = {x}");
         }
         
         static void Main()
         {
-            FactorialAsync();
-            Console.WriteLine("Input the number: ");
-            int n = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine($"Square number {n} = {n * n}");
-            Console.WriteLine("End of method Main");
+            FactorialAsync(6);
+            ReadWriteAsync();
+            Console.WriteLine("Some Work");
             Console.ReadLine();
         }
     }
