@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ArrayOfPerson xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <Name>Tom</Name>
+    <Age>29</Age>
+    <Company>
+      <Name>Microsoft</Name>
+    </Company>
+  </Person>
+  <Person>
+    <Name>Bill</Name>
+    <Age>25</Age>
+    <Company>
+      <Name>Apple</Name>
+    </Company>
+  </Person>
+</ArrayOfPerson>
