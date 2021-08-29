@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<user>
+    <user name = "Bill Gates">
+        <company>Microsoft</company>
+        <age>48</age>
+    </user>
+    <user name = "Larry Page">
+        <company>Google</company>
+        <age>48</age>
+    </user>
+</user>
