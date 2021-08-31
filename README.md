@@ -31,9 +31,9 @@ Full information about **.NET** and **Mono** can be found at the [**link .NET**]
 
 Follow these instructions:
 ```
-Go to the link to the official website of the Rider<br>
-Choose your OS<br>
-Follow the instructions on the site for your operating system<br>
+Go to the link to the official website of the Rider
+Choose your OS
+Follow the instructions on the site for your operating system
 ```
 ---
 
