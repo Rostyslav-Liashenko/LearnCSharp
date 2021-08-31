@@ -26,7 +26,7 @@ Full information about **.NET** and **Mono** can be found at the [**link .NET**]
 	pacman -S mono
 ```
 ---
-### Installing the [JetBrains Rider](https://www.jetbrains.com/ru-ru/rider/) development environment on Ubuntu
+### Installing the [JetBrains Rider](https://www.jetbrains.com/ru-ru/rider/) development environment
 <img align="right" width="230" height="140" src="https://user-images.githubusercontent.com/36339434/123662350-0d70cb80-d83e-11eb-9e44-9120fee0f228.png">
 
 Follow these instructions:
